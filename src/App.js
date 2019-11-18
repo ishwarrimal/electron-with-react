@@ -1,24 +1,28 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Button from './components/Button';
+import List from './components/List';
 
 function App() {
+  // const [apiInfo ,updateApiInfo] = useState({})
+  // const url = `https://samples.openweathermap.org/data/2.5/forecast?id=524901&appid=53c11976204e6cfd8fb802db342e8f88`
+
+  // useEffect(() => {
+  //   fetch(url)
+  //   .then( response => response.text())
+  //   .then(function(text) {
+  //     updateApiInfo(text)
+  //   })
+  
+  // }, [url]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 >
+        Helloo
+      </h1>
+      <Button />
+      <List />
     </div>
   );
 }
