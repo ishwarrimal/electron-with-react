@@ -5,7 +5,6 @@ const reducer = (state = {}, action) => {
         case MAKE_API_CALL:
             return { ...state}
         case POPULATE_STORE_DATA:
-            debugger
             return {...state, weatherJSON : action.json.list}
         default:
             return state
