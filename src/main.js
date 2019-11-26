@@ -2,13 +2,17 @@
 const {app, BrowserWindow} = require('electron')
 const path = require('path')
 const url = require('url');
-
+const logger = require('electron-log')
+const fs = require('fs');
+ 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 
 function createWindow () {
   // Create the browser window.
+  setupLogger()
+  logger.warn('Hello warning')
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
@@ -30,6 +34,14 @@ function createWindow () {
     // when you should delete the corresponding element.
     mainWindow = null
   })
+}
+
+function setupLogger() {
+  // Write to this file, must be set before first logging
+  logger.transports.file.file = __dirname + '/log.log';
+
+  // fs.createWriteStream options, must be set before first logging
+  logger.transports.file.streamConfig = {flags: 'w'};
 }
 
 // This method will be called when Electron has finished
