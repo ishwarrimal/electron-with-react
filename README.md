@@ -24,3 +24,6 @@ Creted error boundary component which console logs any unhandled exceptions
 
 5. commit: da9f3c745ea2b7aed59f41708ef98279430e9db0
 IPC between main and renderer process for logging errors to file
+
+6. commit: dd9aa162b3c1b6450d753e1e78d125f8c70b5e6c
+Implementing hooks (useState, useEffect and useContext)
