@@ -1,9 +1,12 @@
 // Modules to control application life and create native browser window
+const Sentry = require('@sentry/electron');
 const {app, BrowserWindow, ipcMain} = require('electron')
 const path = require('path')
 const url = require('url');
 const logger = require('electron-log')
 const fs = require('fs');
+
+Sentry.init({dsn: 'https://{replaceiwithownid}@sentry.io/{replacewithownid}'});
  
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -12,6 +15,7 @@ let mainWindow
 function createWindow () {
   // Create the browser window.
   setupLogger()
+  // myUndefinedFunction();
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,

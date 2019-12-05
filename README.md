@@ -3,6 +3,26 @@ Most of the concepts are of react, so you can use this as a base to learn react 
 Since this is done for electron, might not work in browser straightforward.. things like `ipcRenderer` `web-security` have been set particularly for 
 electron app.
 
+Concepts covered: 
+
+### redux
+We are making use of redux to maintain a central store. 
+
+### Saga
+Saga is a middleware for store. All the api call we make via saga
+
+### Hooks (useState, useEffect, useContext)
+Hooks are a special API provided by react community to minimize our task of using state, updating them and other things for  `functional component`. 
+Link: https://reactjs.org/docs/hooks-intro.html
+
+### Sentry
+You can make use of sentry to log your excepitons to sentry server
+I have used sentry in one of the commit `7d0ae7536fbec84b129d7220ad555b65dc32bb7e`.
+You need to replace the `sentry.init(.....)` with youe own keys which you get while creating sentery porject.
+NOTE: You need to initialize sentry in main process and in every renderer process as well.
+
+----
+
 
 Project contains code for implementation of react with electron. 
 
@@ -41,3 +61,6 @@ There are multiple commits, each with different concepts:
 
 7. Implementing useContext and useEffect with class component  
     commit : `d16356bc4e6a308cd00d8787722d90d216988f04`
+
+8. Integrating sentry
+    commit : `7d0ae7536fbec84b129d7220ad555b65dc32bb7e`
