@@ -32,6 +32,10 @@ Prettier is great to use with Visual Studio Code. Just download the prettier vsc
 Adding script "format": "prettier --write \"src/\*_/_.{js,jsx}\"" `on package.json`.
 Running `npm run format` will format all the files
 
+### Eslint
+
+On top of Prettier which takes care of formatting the code for you, we would want to enforce some best coding practices: for example we don't want peple ot use js freatures that are depricated like with or using var for varibale declaration. We use ESLint for such rules.
+
 ---
 
 Project contains code for implementation of react with electron.
@@ -72,3 +76,6 @@ There are multiple commits, each with different concepts:
 
 9) Prettier integration
    commit : `055e814c7a7269eceb68d87203c99ebf4117c124`
+
+10) Eslint integration
+    commit: `8d1517ddac8d1f74ef5622a33fb330d6ae956f4b`

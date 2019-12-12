@@ -70,7 +70,8 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "electron": "electron .",
-    "format": "prettier --write \"src/**/*.{js,jsx}\""
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
   },
   "eslintConfig": {
     "extends": "react-app"
