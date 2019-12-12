@@ -1,3 +1,6 @@
-import { createContext } from 'react'
+import { createContext } from "react";
 
-export const LoginContext = createContext([{isAuthenticated: false, userName: ''}, () => {}])
+export const LoginContext = createContext([
+  { isAuthenticated: false, userName: "" },
+  () => {}
+]);
